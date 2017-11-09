@@ -1,24 +1,21 @@
 import React from 'react';
+import NavMenu from './nav-menu'
 
 class Navbar extends React.Component {
     render(){
         var menu = [
             {titulo:"Home",link:"#home"},
-            {titulo:"Contato",link:"#contato"},
-            {titulo:"Sobre",link:"#sobre"}
+            {titulo:"Contact",link:"#contact"},
+            {titulo:"About",link:"#about"}
         ];
-        var lista = menu.map(function(value){
-            return (<li key={value.titulo}><a href={value.link}>{value.titulo}</a></li>);
-        });
+
         var corNavBar = "nav-wrapper " + this.props.cor;
         return (
             <nav>
                 <div className={corNavBar}>
                     <div className="container">
                         <a href="#" className="brand-logo">{this.props.titulo}</a>
-                        <ul id="nav-mobile" className="right">
-                            {lista}
-                        </ul>
+                        <NavMenu menu={menu}/>
                     </div>
                 </div>
             </nav>
