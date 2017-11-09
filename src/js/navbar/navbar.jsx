@@ -2,6 +2,14 @@ import React from 'react';
 
 class Navbar extends React.Component {
     render(){
+        var menu = [
+            {titulo:"Home",link:"#home"},
+            {titulo:"Contato",link:"#contato"},
+            {titulo:"Sobre",link:"#sobre"}
+        ];
+        var lista = menu.map(function(value){
+            return (<li key={value.titulo}><a href={value.link}>{value.titulo}</a></li>);
+        });
         var corNavBar = "nav-wrapper " + this.props.cor;
         return (
             <nav>
@@ -9,9 +17,7 @@ class Navbar extends React.Component {
                     <div className="container">
                         <a href="#" className="brand-logo">{this.props.titulo}</a>
                         <ul id="nav-mobile" className="right">
-                            <li><a href="sass.html">Sass</a></li>
-                            <li><a href="badges.html">Components</a></li>
-                            <li><a href="collapsible.html">JavaScript</a></li>
+                            {lista}
                         </ul>
                     </div>
                 </div>
