@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Card extends React.Component {
+class Cartao extends React.Component {
     render(){
         return(
             <div className="card">
@@ -8,7 +8,7 @@ class Card extends React.Component {
                     <img className="activator" src="http://materializecss.com/images/office.jpg"/>
                     </div>
                     <div className="card-content">
-                        <span className="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                        <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
                         <p><a href="#">This is a link</a></p>
                     </div>
                     <div className="card-reveal">
@@ -20,4 +20,4 @@ class Card extends React.Component {
         }
     }
 
-    export default Card;
+    export default Cartao;
