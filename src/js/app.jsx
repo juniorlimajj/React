@@ -9,7 +9,7 @@ let App = (
         <Navbar titulo="React" cor="blue"/>
         <div className="container">
             <Titulo />
-            <ListaCartao />
+            <ListaCartao qtdLinha="3" tamanhoColuna="4"/>
         </div>
     </div>
 );
