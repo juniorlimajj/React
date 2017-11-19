@@ -1,11 +1,24 @@
 import React from 'react';
 
 class NavMenu extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {menuAtivo: 'Home'};
+        this.changeActive = this.changeActive.bind(this);
+    }
+
+    changeActive(titulo,self){
+        self.setState({menuAtivo: titulo});
+    }
+
     render(){
+
+        var self = this;
+        
         var lista = this.props.menu.map(function(value){
-            return (<li key={value.titulo}><a href={value.link}>{value.titulo}</a></li>);
+            return (<li key={value.titulo} onClick={self.changeActive.bind(null,value.titulo,self)} className={self.state.menuAtivo == value.titulo ? 'active':''}><a href={value.link}>{value.titulo}</a></li>);
         });
-        return( 
+        return(
             <ul id="nav-mobile" className="right">
                 {lista}
             </ul>
