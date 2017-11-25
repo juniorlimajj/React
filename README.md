@@ -10,6 +10,10 @@ This project contains the follow topics
 
 3. Using props into ReactJS
 
-4. Refatoring Some Components
+4. Understanding the states and setState()
 
-5. Lyfecycle of a Component
+5. Refatoring Some Components
+
+6. Lyfecycle of a Component
+
+7. Integration with child components
