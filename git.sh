@@ -5,5 +5,6 @@ git status
 git add . 
 read -p "Enter your commit message: " COMMITMESSAGE
 git commit -m "${COMMITMESSAGE}"
-read -p "Enter your branch: " BRANCH
+CURRENT = git status
+read -p "Enter your branch: (Your current branch is ${CURRENT})" BRANCH
 git push origin ${BRANCH}
