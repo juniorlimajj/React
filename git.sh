@@ -1,3 +1,6 @@
+#!/bin/bash
+# Script do preguiçoso
+
 git status
 git add . 
 read -p "Enter your commit message: " COMMITMESSAGE
